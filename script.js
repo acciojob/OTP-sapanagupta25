@@ -1,25 +1,28 @@
 //your JS code here. If required.
 const codes = document.querySelectorAll('.code');
 
+// Handle typing forward
 codes.forEach((code, index) => {
   code.addEventListener('input', (e) => {
     const value = e.target.value;
 
     if (value && index < codes.length - 1) {
-      // ✅ Focus after value is set
+      // ✅ Focus shift after small delay
       setTimeout(() => codes[index + 1].focus(), 10);
     }
   });
 
+  // Handle backspace
   code.addEventListener('keydown', (e) => {
     if (e.key === 'Backspace') {
-      if (index > 0 && !code.value) {
-        // ✅ Ensure backspace moves focus correctly
+      if (!code.value && index > 0) {
+        // ✅ Focus shift after backspace processing
         setTimeout(() => codes[index - 1].focus(), 10);
       }
     }
   });
 
+  // Clean non-numeric characters
   code.addEventListener('input', () => {
     code.value = code.value.replace(/[^0-9]/g, '');
   });
