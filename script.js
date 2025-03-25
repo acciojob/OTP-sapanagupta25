@@ -4,22 +4,22 @@ const codes = document.querySelectorAll('.code');
 codes.forEach((code, index) => {
   code.addEventListener('input', (e) => {
     const value = e.target.value;
+
     if (value && index < codes.length - 1) {
-      // ✅ Move to next input if value is entered
-      codes[index + 1].focus();
+      // ✅ Focus after value is set
+      setTimeout(() => codes[index + 1].focus(), 10);
     }
   });
 
   code.addEventListener('keydown', (e) => {
     if (e.key === 'Backspace') {
       if (index > 0 && !code.value) {
-        // ✅ Move to previous input on backspace
-        codes[index - 1].focus();
+        // ✅ Ensure backspace moves focus correctly
+        setTimeout(() => codes[index - 1].focus(), 10);
       }
     }
   });
 
-  // ✅ Prevent entering more than one digit
   code.addEventListener('input', () => {
     code.value = code.value.replace(/[^0-9]/g, '');
   });
