@@ -1,1 +1,60 @@
 /*  your css code here. If applicable */
+/* General Styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f9;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+/* Heading and Subtext */
+#verification_heading {
+  font-size: 24px;
+  color: #333;
+}
+
+#verification_subtext {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* OTP Input Fields */
+.code-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.code {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.code:focus {
+  border-color: #4CAF50;
+}
+
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.code[type="number"] {
+  -moz-appearance: textfield;
+}
