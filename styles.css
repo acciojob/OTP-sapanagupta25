@@ -1,60 +1,51 @@
-/*  your css code here. If applicable */
-/* General Styles */
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f4f4f9;
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
+.container{
+	height:50vh;
+	width:85%;
+	margin:auto;
+	padding:20px;
+	border-radius:10px;
+	border:3px solid black;
 }
 
-/* Container */
-.container {
-  text-align: center;
+#verification_heading{
+	text-align:center;
 }
 
-/* Heading and Subtext */
-#verification_heading {
-  font-size: 24px;
-  color: #333;
+#verification_subtext{
+	font-weight:100;
+	text-align:center;
 }
 
-#verification_subtext {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
+.code-container{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:15px;
 }
 
-/* OTP Input Fields */
-.code-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
-.code {
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  text-align: center;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-  transition: border-color 0.3s ease;
+ input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+.code{
+	width:75px;
+	height:75px;
+	border-radius:10px;
+	font-size:50px;
 }
 
-.code:focus {
-  border-color: #4CAF50;
-}
-
-.code::-webkit-outer-spin-button,
-.code::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.code[type="number"] {
-  -moz-appearance: textfield;
+.info{
+	width:360px;
+	margin:auto;
+	text-align:center;
+	font-size:13px;
+	background-color:lightpink;
+	padding:3px;
+	border-radius:5px;
+	margin-top:40px;
 }
